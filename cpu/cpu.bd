@@ -1,0 +1,460 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB328537A26C4E08B",
+      "device": "xc7a100tcsg324-1",
+      "name": "cpu",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "debounce_0": "",
+      "register_0": "",
+      "alu_0": "",
+      "ssd_0": "",
+      "isa_decoder_0": "",
+      "mux_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "BTNC": {
+        "direction": "I"
+      },
+      "SW": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "AN": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "Seg": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      }
+    },
+    "components": {
+      "debounce_0": {
+        "vlnv": "xilinx.com:module_ref:debounce:1.0",
+        "xci_name": "cpu_debounce_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debounce",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "register_0": {
+        "vlnv": "xilinx.com:module_ref:register:1.0",
+        "xci_name": "cpu_register_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "register",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rd_en": {
+            "direction": "I"
+          },
+          "rs_en": {
+            "direction": "I"
+          },
+          "wr_en": {
+            "direction": "I"
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "rs_addr": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "wr_data": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "rd_data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "rs_data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "valid": {
+            "direction": "O"
+          }
+        }
+      },
+      "alu_0": {
+        "vlnv": "xilinx.com:user:alu:1.0",
+        "xci_name": "cpu_alu_0_0"
+      },
+      "ssd_0": {
+        "vlnv": "xilinx.com:module_ref:ssd:1.0",
+        "xci_name": "cpu_ssd_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ssd",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rd_data": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "rs_data": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "IMM": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "imm_en": {
+            "direction": "I"
+          },
+          "anode": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "seg": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "isa_decoder_0": {
+        "vlnv": "xilinx.com:module_ref:isa_decoder:1.0",
+        "xci_name": "cpu_isa_decoder_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "isa_decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "instr": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "rd_en": {
+            "direction": "O"
+          },
+          "rs_en": {
+            "direction": "O"
+          },
+          "wr_en": {
+            "direction": "O"
+          },
+          "opcode": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rd_addr": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rs_addr": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "IMM": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "imm_en": {
+            "direction": "O"
+          }
+        }
+      },
+      "mux_0": {
+        "vlnv": "xilinx.com:module_ref:mux:1.0",
+        "xci_name": "cpu_mux_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "AND_OUT": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "D": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "OR_OUT": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "P": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Q": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "QVALID": {
+            "direction": "I"
+          },
+          "S": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "XOR_OUT": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "IMM": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "MOV": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "opcode": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "mux_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "isa_decoder_0_rd_en": {
+        "ports": [
+          "isa_decoder_0/rd_en",
+          "register_0/rd_en"
+        ]
+      },
+      "isa_decoder_0_rs_en": {
+        "ports": [
+          "isa_decoder_0/rs_en",
+          "register_0/rs_en"
+        ]
+      },
+      "isa_decoder_0_wr_en": {
+        "ports": [
+          "isa_decoder_0/wr_en",
+          "register_0/wr_en"
+        ]
+      },
+      "register_0_rd_data": {
+        "ports": [
+          "register_0/rd_data",
+          "alu_0/A",
+          "ssd_0/rd_data"
+        ]
+      },
+      "register_0_rs_data": {
+        "ports": [
+          "register_0/rs_data",
+          "alu_0/B",
+          "ssd_0/rs_data",
+          "mux_0/MOV"
+        ]
+      },
+      "isa_decoder_0_IMM": {
+        "ports": [
+          "isa_decoder_0/IMM",
+          "ssd_0/IMM",
+          "mux_0/IMM"
+        ]
+      },
+      "isa_decoder_0_rd_addr": {
+        "ports": [
+          "isa_decoder_0/rd_addr",
+          "register_0/rd_addr"
+        ]
+      },
+      "isa_decoder_0_rs_addr": {
+        "ports": [
+          "isa_decoder_0/rs_addr",
+          "register_0/rs_addr"
+        ]
+      },
+      "isa_decoder_0_opcode": {
+        "ports": [
+          "isa_decoder_0/opcode",
+          "mux_0/opcode"
+        ]
+      },
+      "isa_decoder_0_imm_en": {
+        "ports": [
+          "isa_decoder_0/imm_en",
+          "ssd_0/imm_en"
+        ]
+      },
+      "debounce_0_data_out": {
+        "ports": [
+          "debounce_0/data_out",
+          "isa_decoder_0/btn"
+        ]
+      },
+      "clki_1": {
+        "ports": [
+          "clk",
+          "debounce_0/clk",
+          "register_0/clk",
+          "alu_0/CLK",
+          "ssd_0/clk",
+          "isa_decoder_0/clk",
+          "mux_0/clk"
+        ]
+      },
+      "mux_0_mux_out": {
+        "ports": [
+          "mux_0/mux_out",
+          "register_0/wr_data"
+        ]
+      },
+      "BTNC_1": {
+        "ports": [
+          "BTNC",
+          "debounce_0/data_in"
+        ]
+      },
+      "SW_1": {
+        "ports": [
+          "SW",
+          "isa_decoder_0/instr"
+        ]
+      },
+      "ssd_0_anode": {
+        "ports": [
+          "ssd_0/anode",
+          "AN"
+        ]
+      },
+      "ssd_0_seg": {
+        "ports": [
+          "ssd_0/seg",
+          "Seg"
+        ]
+      },
+      "alu_0_XOR_OUT": {
+        "ports": [
+          "alu_0/XOR_OUT",
+          "mux_0/XOR_OUT"
+        ]
+      },
+      "alu_0_S": {
+        "ports": [
+          "alu_0/S",
+          "mux_0/S"
+        ]
+      },
+      "alu_0_Q": {
+        "ports": [
+          "alu_0/Q",
+          "mux_0/Q"
+        ]
+      },
+      "register_0_valid": {
+        "ports": [
+          "register_0/valid",
+          "alu_0/AVALID",
+          "alu_0/BVALID"
+        ]
+      },
+      "alu_0_QVALID": {
+        "ports": [
+          "alu_0/QVALID",
+          "mux_0/QVALID"
+        ]
+      },
+      "alu_0_P": {
+        "ports": [
+          "alu_0/P",
+          "mux_0/P"
+        ]
+      },
+      "alu_0_OR_OUT": {
+        "ports": [
+          "alu_0/OR_OUT",
+          "mux_0/OR_OUT"
+        ]
+      },
+      "alu_0_D": {
+        "ports": [
+          "alu_0/D",
+          "mux_0/D"
+        ]
+      },
+      "alu_0_AND_OUT": {
+        "ports": [
+          "alu_0/AND_OUT",
+          "mux_0/AND_OUT"
+        ]
+      }
+    }
+  }
+}

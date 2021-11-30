@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 13 18:40:38 2021" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys-a7-100t:part0:1.0" DEVICE="7a100t" NAME="alu" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_gen_0" PORT="s_axis_divisor_tdata"/>
+        <CONNECTION INSTANCE="c_addsub_0" PORT="B"/>
+        <CONNECTION INSTANCE="c_addsub_1" PORT="B"/>
+        <CONNECTION INSTANCE="mult_gen_0" PORT="B"/>
+        <CONNECTION INSTANCE="and16_0" PORT="B"/>
+        <CONNECTION INSTANCE="or16_0" PORT="B"/>
+        <CONNECTION INSTANCE="xor2_0" PORT="B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BVALID" SIGIS="undef" SIGNAME="External_Ports_BVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_gen_0" PORT="s_axis_divisor_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="c_addsub_0" PORT="A"/>
+        <CONNECTION INSTANCE="c_addsub_1" PORT="A"/>
+        <CONNECTION INSTANCE="mult_gen_0" PORT="A"/>
+        <CONNECTION INSTANCE="div_gen_0" PORT="s_axis_dividend_tdata"/>
+        <CONNECTION INSTANCE="and16_0" PORT="A"/>
+        <CONNECTION INSTANCE="or16_0" PORT="A"/>
+        <CONNECTION INSTANCE="xor2_0" PORT="A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AVALID" SIGIS="undef" SIGNAME="External_Ports_AVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_gen_0" PORT="s_axis_dividend_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="CLK" SIGIS="undef" SIGNAME="External_Ports_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="c_addsub_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="c_addsub_1" PORT="CLK"/>
+        <CONNECTION INSTANCE="div_gen_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="mult_gen_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Q" RIGHT="0" SIGIS="undef" SIGNAME="div_gen_0_m_axis_dout_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_gen_0" PORT="m_axis_dout_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="QVALID" SIGIS="undef" SIGNAME="div_gen_0_m_axis_dout_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_gen_0" PORT="m_axis_dout_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="S" RIGHT="0" SIGIS="undef" SIGNAME="c_addsub_0_S">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="c_addsub_0" PORT="S"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="D" RIGHT="0" SIGIS="undef" SIGNAME="c_addsub_1_S">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="c_addsub_1" PORT="S"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="P" RIGHT="0" SIGIS="undef" SIGNAME="mult_gen_0_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mult_gen_0" PORT="P"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="AND_OUT" RIGHT="0" SIGIS="undef" SIGNAME="and16_0_Y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="and16_0" PORT="Y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="OR_OUT" RIGHT="0" SIGIS="undef" SIGNAME="or16_0_Y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="or16_0" PORT="Y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="XOR_OUT" RIGHT="0" SIGIS="undef" SIGNAME="xor2_0_Y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xor2_0" PORT="Y"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/and16_0" HWVERSION="1.0" INSTANCE="and16_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="and16" VLNV="xilinx.com:module_ref:and16:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="alu_and16_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="and16_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AND_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="14" FULLNAME="/c_addsub_0" HWVERSION="12.0" INSTANCE="c_addsub_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c_addsub" VLNV="xilinx.com:ip:c_addsub:12.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=c_addsub;v=v12_0;d=pg120-c-addsub.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_IMPLEMENTATION" VALUE="0"/>
+        <PARAMETER NAME="C_A_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_B_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_OUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_CE_OVERRIDES_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_A_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_B_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="1"/>
+        <PARAMETER NAME="C_ADD_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_B_CONSTANT" VALUE="0"/>
+        <PARAMETER NAME="C_B_VALUE" VALUE="0000000000000000"/>
+        <PARAMETER NAME="C_AINIT_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_SINIT_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_CE_OVERRIDES_BYPASS" VALUE="1"/>
+        <PARAMETER NAME="C_BYPASS_LOW" VALUE="0"/>
+        <PARAMETER NAME="C_SCLR_OVERRIDES_SSET" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_C_IN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_C_OUT" VALUE="0"/>
+        <PARAMETER NAME="C_BORROW_LOW" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_BYPASS" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SSET" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SINIT" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="alu_c_addsub_0_0"/>
+        <PARAMETER NAME="Implementation" VALUE="Fabric"/>
+        <PARAMETER NAME="A_Type" VALUE="Signed"/>
+        <PARAMETER NAME="B_Type" VALUE="Signed"/>
+        <PARAMETER NAME="A_Width" VALUE="16"/>
+        <PARAMETER NAME="B_Width" VALUE="16"/>
+        <PARAMETER NAME="Add_Mode" VALUE="Add"/>
+        <PARAMETER NAME="Out_Width" VALUE="16"/>
+        <PARAMETER NAME="Latency_Configuration" VALUE="Manual"/>
+        <PARAMETER NAME="Latency" VALUE="1"/>
+        <PARAMETER NAME="B_Constant" VALUE="false"/>
+        <PARAMETER NAME="B_Value" VALUE="0000000000000000"/>
+        <PARAMETER NAME="CE" VALUE="false"/>
+        <PARAMETER NAME="C_In" VALUE="false"/>
+        <PARAMETER NAME="C_Out" VALUE="false"/>
+        <PARAMETER NAME="Borrow_Sense" VALUE="Active_Low"/>
+        <PARAMETER NAME="SCLR" VALUE="false"/>
+        <PARAMETER NAME="SSET" VALUE="false"/>
+        <PARAMETER NAME="SINIT" VALUE="false"/>
+        <PARAMETER NAME="SINIT_Value" VALUE="0"/>
+        <PARAMETER NAME="Bypass" VALUE="false"/>
+        <PARAMETER NAME="Bypass_Sense" VALUE="Active_High"/>
+        <PARAMETER NAME="Sync_Ctrl_Priority" VALUE="Reset_Overrides_Set"/>
+        <PARAMETER NAME="Sync_CE_Priority" VALUE="Sync_Overrides_CE"/>
+        <PARAMETER NAME="Bypass_CE_Priority" VALUE="CE_Overrides_Bypass"/>
+        <PARAMETER NAME="AINIT_Value" VALUE="0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="S" RIGHT="0" SIGIS="data" SIGNAME="c_addsub_0_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="S"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="14" FULLNAME="/c_addsub_1" HWVERSION="12.0" INSTANCE="c_addsub_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c_addsub" VLNV="xilinx.com:ip:c_addsub:12.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=c_addsub;v=v12_0;d=pg120-c-addsub.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_IMPLEMENTATION" VALUE="0"/>
+        <PARAMETER NAME="C_A_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_B_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_OUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_CE_OVERRIDES_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_A_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_B_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="1"/>
+        <PARAMETER NAME="C_ADD_MODE" VALUE="1"/>
+        <PARAMETER NAME="C_B_CONSTANT" VALUE="0"/>
+        <PARAMETER NAME="C_B_VALUE" VALUE="0000000000000000"/>
+        <PARAMETER NAME="C_AINIT_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_SINIT_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_CE_OVERRIDES_BYPASS" VALUE="1"/>
+        <PARAMETER NAME="C_BYPASS_LOW" VALUE="0"/>
+        <PARAMETER NAME="C_SCLR_OVERRIDES_SSET" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_C_IN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_C_OUT" VALUE="0"/>
+        <PARAMETER NAME="C_BORROW_LOW" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_BYPASS" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SSET" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SINIT" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="alu_c_addsub_1_0"/>
+        <PARAMETER NAME="Implementation" VALUE="Fabric"/>
+        <PARAMETER NAME="A_Type" VALUE="Signed"/>
+        <PARAMETER NAME="B_Type" VALUE="Signed"/>
+        <PARAMETER NAME="A_Width" VALUE="16"/>
+        <PARAMETER NAME="B_Width" VALUE="16"/>
+        <PARAMETER NAME="Add_Mode" VALUE="Subtract"/>
+        <PARAMETER NAME="Out_Width" VALUE="16"/>
+        <PARAMETER NAME="Latency_Configuration" VALUE="Manual"/>
+        <PARAMETER NAME="Latency" VALUE="1"/>
+        <PARAMETER NAME="B_Constant" VALUE="false"/>
+        <PARAMETER NAME="B_Value" VALUE="0000000000000000"/>
+        <PARAMETER NAME="CE" VALUE="false"/>
+        <PARAMETER NAME="C_In" VALUE="false"/>
+        <PARAMETER NAME="C_Out" VALUE="false"/>
+        <PARAMETER NAME="Borrow_Sense" VALUE="Active_Low"/>
+        <PARAMETER NAME="SCLR" VALUE="false"/>
+        <PARAMETER NAME="SSET" VALUE="false"/>
+        <PARAMETER NAME="SINIT" VALUE="false"/>
+        <PARAMETER NAME="SINIT_Value" VALUE="0"/>
+        <PARAMETER NAME="Bypass" VALUE="false"/>
+        <PARAMETER NAME="Bypass_Sense" VALUE="Active_High"/>
+        <PARAMETER NAME="Sync_Ctrl_Priority" VALUE="Reset_Overrides_Set"/>
+        <PARAMETER NAME="Sync_CE_Priority" VALUE="Sync_Overrides_CE"/>
+        <PARAMETER NAME="Bypass_CE_Priority" VALUE="CE_Overrides_Bypass"/>
+        <PARAMETER NAME="AINIT_Value" VALUE="0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="S" RIGHT="0" SIGIS="data" SIGNAME="c_addsub_1_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="16" FULLNAME="/div_gen_0" HWVERSION="5.1" INSTANCE="div_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="div_gen" VLNV="xilinx.com:ip:div_gen:5.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=div_gen;v=v5_1;d=pg151-div-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_HAS_ARESETN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="20"/>
+        <PARAMETER NAME="ALGORITHM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="DIVISOR_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="DIVIDEND_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="SIGNED_B" VALUE="1"/>
+        <PARAMETER NAME="DIVCLK_SEL" VALUE="1"/>
+        <PARAMETER NAME="FRACTIONAL_B" VALUE="0"/>
+        <PARAMETER NAME="FRACTIONAL_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_HAS_DIV_BY_ZERO" VALUE="0"/>
+        <PARAMETER NAME="C_THROTTLE_SCHEME" VALUE="3"/>
+        <PARAMETER NAME="C_TLAST_RESOLUTION" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_DIVISOR_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_DIVISOR_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_DIVISOR_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXIS_DIVISOR_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_DIVIDEND_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_DIVIDEND_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_DIVIDEND_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXIS_DIVIDEND_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="alu_div_gen_0_0"/>
+        <PARAMETER NAME="algorithm_type" VALUE="Radix2"/>
+        <PARAMETER NAME="dividend_and_quotient_width" VALUE="16"/>
+        <PARAMETER NAME="dividend_has_tuser" VALUE="false"/>
+        <PARAMETER NAME="dividend_tuser_width" VALUE="1"/>
+        <PARAMETER NAME="dividend_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="divisor_width" VALUE="16"/>
+        <PARAMETER NAME="divisor_has_tuser" VALUE="false"/>
+        <PARAMETER NAME="divisor_tuser_width" VALUE="1"/>
+        <PARAMETER NAME="divisor_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="remainder_type" VALUE="Remainder"/>
+        <PARAMETER NAME="fractional_width" VALUE="16"/>
+        <PARAMETER NAME="operand_sign" VALUE="Signed"/>
+        <PARAMETER NAME="clocks_per_division" VALUE="1"/>
+        <PARAMETER NAME="divide_by_zero_detect" VALUE="false"/>
+        <PARAMETER NAME="FlowControl" VALUE="NonBlocking"/>
+        <PARAMETER NAME="OptimizeGoal" VALUE="Performance"/>
+        <PARAMETER NAME="OutTready" VALUE="false"/>
+        <PARAMETER NAME="OutTLASTBehv" VALUE="Null"/>
+        <PARAMETER NAME="latency_configuration" VALUE="Automatic"/>
+        <PARAMETER NAME="latency" VALUE="20"/>
+        <PARAMETER NAME="ACLKEN" VALUE="false"/>
+        <PARAMETER NAME="ARESETN" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="1000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_divisor_tvalid" SIGIS="undef" SIGNAME="External_Ports_BVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s_axis_divisor_tdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_dividend_tvalid" SIGIS="undef" SIGNAME="External_Ports_AVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s_axis_dividend_tdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_dout_tvalid" SIGIS="undef" SIGNAME="div_gen_0_m_axis_dout_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="QVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m_axis_dout_tdata" RIGHT="0" SIGIS="undef" SIGNAME="div_gen_0_m_axis_dout_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Q"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M_AXIS_DOUT" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="1000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_fractional {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value fractional} enabled {attribs {resolve_type generated dependency fract_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency fract_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fract_remainder_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type generated dependency fract_remainder_signed format bool minimum {} maximum {}} value true}}}}} field_remainder {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value remainder} enabled {attribs {resolve_type generated dependency remainder_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency remainder_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency fract_remainder_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type generated dependency fract_remainder_signed format bool minimum {} maximum {}} value true}}}}} field_quotient {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value quotient} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency quotient_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency quotient_offset format long minimum {} maximum {}} value 16} integer {signed {attribs {resolve_type generated dependency quotient_signed format bool minimum {} maximum {}} value true}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_divide_by_zero {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value divide_by_zero} enabled {attribs {resolve_type generated dependency divbyzero_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency divbyzero_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_divisor_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value divisor_tuser} enabled {attribs {resolve_type generated dependency divisor_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency divisor_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency divisor_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_dividend_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value dividend_tuser} enabled {attribs {resolve_type generated dependency dividend_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency dividend_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency dividend_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 0}"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_dout_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_dout_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS_DIVISOR" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="1000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_divisor_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_divisor_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS_DIVIDEND" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="1000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_dividend_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_dividend_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="16" FULLNAME="/mult_gen_0" HWVERSION="12.0" INSTANCE="mult_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mult_gen" VLNV="xilinx.com:ip:mult_gen:12.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=mult_gen;v=v12_0;d=pg108-mult-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
+        <PARAMETER NAME="C_MODEL_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_OPTIMIZE_GOAL" VALUE="1"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_HAS_CE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="4"/>
+        <PARAMETER NAME="C_A_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_A_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_B_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_B_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_OUT_HIGH" VALUE="31"/>
+        <PARAMETER NAME="C_OUT_LOW" VALUE="0"/>
+        <PARAMETER NAME="C_MULT_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_CE_OVERRIDES_SCLR" VALUE="0"/>
+        <PARAMETER NAME="C_CCM_IMP" VALUE="0"/>
+        <PARAMETER NAME="C_B_VALUE" VALUE="10000001"/>
+        <PARAMETER NAME="C_HAS_ZERO_DETECT" VALUE="0"/>
+        <PARAMETER NAME="C_ROUND_OUTPUT" VALUE="0"/>
+        <PARAMETER NAME="C_ROUND_PT" VALUE="0"/>
+        <PARAMETER NAME="InternalUser" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="alu_mult_gen_0_0"/>
+        <PARAMETER NAME="MultType" VALUE="Parallel_Multiplier"/>
+        <PARAMETER NAME="PortAType" VALUE="Signed"/>
+        <PARAMETER NAME="PortAWidth" VALUE="16"/>
+        <PARAMETER NAME="PortBType" VALUE="Signed"/>
+        <PARAMETER NAME="PortBWidth" VALUE="16"/>
+        <PARAMETER NAME="ConstValue" VALUE="129"/>
+        <PARAMETER NAME="CcmImp" VALUE="Distributed_Memory"/>
+        <PARAMETER NAME="Multiplier_Construction" VALUE="Use_LUTs"/>
+        <PARAMETER NAME="OptGoal" VALUE="Speed"/>
+        <PARAMETER NAME="Use_Custom_Output_Width" VALUE="false"/>
+        <PARAMETER NAME="OutputWidthHigh" VALUE="31"/>
+        <PARAMETER NAME="OutputWidthLow" VALUE="0"/>
+        <PARAMETER NAME="UseRounding" VALUE="false"/>
+        <PARAMETER NAME="RoundPoint" VALUE="0"/>
+        <PARAMETER NAME="PipeStages" VALUE="4"/>
+        <PARAMETER NAME="ClockEnable" VALUE="false"/>
+        <PARAMETER NAME="SyncClear" VALUE="false"/>
+        <PARAMETER NAME="SclrCePriority" VALUE="SCLR_Overrides_CE"/>
+        <PARAMETER NAME="ZeroDetect" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="P" RIGHT="0" SIGIS="data" SIGNAME="mult_gen_0_P">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="P"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/or16_0" HWVERSION="1.0" INSTANCE="or16_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="or16" VLNV="xilinx.com:module_ref:or16:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="alu_or16_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="or16_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="OR_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/xor2_0" HWVERSION="1.0" INSTANCE="xor2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xor2" VLNV="xilinx.com:module_ref:xor2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="alu_xor2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Y" RIGHT="0" SIGIS="undef" SIGNAME="xor2_0_Y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="XOR_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

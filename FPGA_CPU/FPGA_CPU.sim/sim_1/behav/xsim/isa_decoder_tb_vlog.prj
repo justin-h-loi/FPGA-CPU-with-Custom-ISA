@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/isa_decoder.v" \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/isa_decoder_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

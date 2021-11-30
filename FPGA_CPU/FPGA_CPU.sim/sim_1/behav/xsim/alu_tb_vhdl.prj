@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_div_gen_0_0/sim/alu_div_gen_0_0.vhd" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_mult_gen_0_0/sim/alu_mult_gen_0_0.vhd" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_c_addsub_0_0/sim/alu_c_addsub_0_0.vhd" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_c_addsub_1_0/sim/alu_c_addsub_1_0.vhd" \
+
+# Do not sort compile order
+nosort

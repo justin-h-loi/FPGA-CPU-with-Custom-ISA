@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="alu_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="alu_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/alu_tb/A" type="array">
+      <obj_property name="ElementShortName">A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/B" type="array">
+      <obj_property name="ElementShortName">B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/AVALID" type="logic">
+      <obj_property name="ElementShortName">AVALID</obj_property>
+      <obj_property name="ObjectShortName">AVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/BVALID" type="logic">
+      <obj_property name="ElementShortName">BVALID</obj_property>
+      <obj_property name="ObjectShortName">BVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/Q" type="array">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/remainder" type="array">
+      <obj_property name="ElementShortName">remainder[15:0]</obj_property>
+      <obj_property name="ObjectShortName">remainder[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/QVALID" type="logic">
+      <obj_property name="ElementShortName">QVALID</obj_property>
+      <obj_property name="ObjectShortName">QVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/S" type="array">
+      <obj_property name="ElementShortName">S[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/D" type="array">
+      <obj_property name="ElementShortName">D[15:0]</obj_property>
+      <obj_property name="ObjectShortName">D[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/P" type="array">
+      <obj_property name="ElementShortName">P[15:0]</obj_property>
+      <obj_property name="ObjectShortName">P[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/AND_OUT" type="array">
+      <obj_property name="ElementShortName">AND_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">AND_OUT[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/OR_OUT" type="array">
+      <obj_property name="ElementShortName">OR_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OR_OUT[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/XOR_OUT" type="array">
+      <obj_property name="ElementShortName">XOR_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">XOR_OUT[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_tb/tempQ" type="array">
+      <obj_property name="ElementShortName">tempQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tempQ[31:0]</obj_property>
+   </wvobject>
+</wave_config>

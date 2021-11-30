@@ -1,0 +1,343 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9617FD207D83D6AB",
+      "device": "xc7a100tcsg324-1",
+      "name": "alu",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "div_gen_0": "",
+      "mult_gen_0": "",
+      "c_addsub_0": "",
+      "c_addsub_1": "",
+      "and16_0": "",
+      "or16_0": "",
+      "xor2_0": ""
+    },
+    "ports": {
+      "B": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "BVALID": {
+        "direction": "I"
+      },
+      "A": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "AVALID": {
+        "direction": "I"
+      },
+      "CLK": {
+        "direction": "I"
+      },
+      "Q": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "QVALID": {
+        "direction": "O"
+      },
+      "S": {
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "D": {
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "P": {
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 32}",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "AND_OUT": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "OR_OUT": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "XOR_OUT": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "div_gen_0": {
+        "vlnv": "xilinx.com:ip:div_gen:5.1",
+        "xci_name": "alu_div_gen_0_0"
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "alu_mult_gen_0_0",
+        "parameters": {
+          "PipeStages": {
+            "value": "4"
+          },
+          "PortAWidth": {
+            "value": "16"
+          },
+          "PortBWidth": {
+            "value": "16"
+          }
+        }
+      },
+      "c_addsub_0": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "alu_c_addsub_0_0",
+        "parameters": {
+          "A_Width": {
+            "value": "16"
+          },
+          "B_Value": {
+            "value": "0000000000000000"
+          },
+          "B_Width": {
+            "value": "16"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "16"
+          }
+        }
+      },
+      "c_addsub_1": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "alu_c_addsub_1_0",
+        "parameters": {
+          "A_Width": {
+            "value": "16"
+          },
+          "Add_Mode": {
+            "value": "Subtract"
+          },
+          "B_Value": {
+            "value": "0000000000000000"
+          },
+          "B_Width": {
+            "value": "16"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "16"
+          }
+        }
+      },
+      "and16_0": {
+        "vlnv": "xilinx.com:module_ref:and16:1.0",
+        "xci_name": "alu_and16_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "and16",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Y": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "or16_0": {
+        "vlnv": "xilinx.com:module_ref:or16:1.0",
+        "xci_name": "alu_or16_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or16",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Y": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "xor2_0": {
+        "vlnv": "xilinx.com:module_ref:xor2:1.0",
+        "xci_name": "alu_xor2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "xor2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Y": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "B_1": {
+        "ports": [
+          "B",
+          "div_gen_0/s_axis_divisor_tdata",
+          "c_addsub_0/B",
+          "c_addsub_1/B",
+          "mult_gen_0/B",
+          "and16_0/B",
+          "or16_0/B",
+          "xor2_0/B"
+        ]
+      },
+      "BVALID_1": {
+        "ports": [
+          "BVALID",
+          "div_gen_0/s_axis_divisor_tvalid"
+        ]
+      },
+      "A_1": {
+        "ports": [
+          "A",
+          "c_addsub_0/A",
+          "c_addsub_1/A",
+          "mult_gen_0/A",
+          "div_gen_0/s_axis_dividend_tdata",
+          "and16_0/A",
+          "or16_0/A",
+          "xor2_0/A"
+        ]
+      },
+      "AVALID_1": {
+        "ports": [
+          "AVALID",
+          "div_gen_0/s_axis_dividend_tvalid"
+        ]
+      },
+      "CLK_1": {
+        "ports": [
+          "CLK",
+          "c_addsub_0/CLK",
+          "c_addsub_1/CLK",
+          "div_gen_0/aclk",
+          "mult_gen_0/CLK"
+        ]
+      },
+      "div_gen_0_m_axis_dout_tdata": {
+        "ports": [
+          "div_gen_0/m_axis_dout_tdata",
+          "Q"
+        ]
+      },
+      "div_gen_0_m_axis_dout_tvalid": {
+        "ports": [
+          "div_gen_0/m_axis_dout_tvalid",
+          "QVALID"
+        ]
+      },
+      "c_addsub_0_S": {
+        "ports": [
+          "c_addsub_0/S",
+          "S"
+        ]
+      },
+      "c_addsub_1_S": {
+        "ports": [
+          "c_addsub_1/S",
+          "D"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "P"
+        ]
+      },
+      "and16_0_Y": {
+        "ports": [
+          "and16_0/Y",
+          "AND_OUT"
+        ]
+      },
+      "or16_0_Y": {
+        "ports": [
+          "or16_0/Y",
+          "OR_OUT"
+        ]
+      },
+      "xor2_0_Y": {
+        "ports": [
+          "xor2_0/Y",
+          "XOR_OUT"
+        ]
+      }
+    }
+  }
+}

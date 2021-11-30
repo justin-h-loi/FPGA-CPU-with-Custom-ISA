@@ -1,0 +1,19 @@
+verilog xil_defaultlib  \
+"../../../bd/cpu/ip/cpu_debounce_0_0/sim/cpu_debounce_0_0.v" \
+"../../../bd/cpu/ip/cpu_isa_decoder_0_0/sim/cpu_isa_decoder_0_0.v" \
+"../../../bd/cpu/ip/cpu_ssd_0_0/sim/cpu_ssd_0_0.v" \
+"../../../bd/cpu/ip/cpu_register_0_0/sim/cpu_register_0_0.v" \
+"../../../bd/cpu/ipshared/4688/sim/alu_and16_0_0.v" \
+"../../../bd/cpu/ipshared/4688/sim/alu_or16_0_0.v" \
+"../../../bd/cpu/ipshared/4688/sim/alu_xor2_0_0.v" \
+"../../../bd/cpu/ipshared/4688/src/and16.v" \
+"../../../bd/cpu/ipshared/4688/src/or16.v" \
+"../../../bd/cpu/ipshared/4688/src/xor16.v" \
+"../../../bd/cpu/ipshared/4688/sim/alu.v" \
+"../../../bd/cpu/ip/cpu_alu_0_0/sim/cpu_alu_0_0.v" \
+"../../../bd/cpu/ip/cpu_mux_0_2/sim/cpu_mux_0_2.v" \
+"../../../bd/cpu/sim/cpu.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

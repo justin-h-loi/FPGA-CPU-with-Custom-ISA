@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="cpu_isa_decoder_0_0_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_isa_decoder_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpu_debounce_0_0_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_debounce_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpu_alu_0_0_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_alu_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpu_ssd_0_0_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_ssd_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpu_register_0_0_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_register_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpu_mux_0_2_synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/cpu_mux_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="cpu_isa_decoder_0_0_synth_1"/>
+		<Parent Id="cpu_debounce_0_0_synth_1"/>
+		<Parent Id="cpu_alu_0_0_synth_1"/>
+		<Parent Id="cpu_ssd_0_0_synth_1"/>
+		<Parent Id="cpu_register_0_0_synth_1"/>
+		<Parent Id="cpu_mux_0_2_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

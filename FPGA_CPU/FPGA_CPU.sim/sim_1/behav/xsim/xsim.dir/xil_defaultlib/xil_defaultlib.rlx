@@ -1,0 +1,21 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/alu_tb.v,1615760738,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/register.v,,alu_tb,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/isa_decoder_tb.v,1616881776,verilog,,,,isa_decoder_tb,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/register_tb.v,1616890313,verilog,,,,register_tb,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/and16.v,1615677722,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/or16.v,,and16,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/isa_decoder.v,1616872323,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/isa_decoder_tb.v,,isa_decoder,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/or16.v,1615677736,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/xor16.v,,or16,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/register.v,1616889022,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/register_tb.v,,register,,,,,,,,
+C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/xor16.v,1615677745,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/alu_tb.v,,xor2,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_and16_0_0/sim/alu_and16_0_0.v,1615678837,verilog,,D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_or16_0_0/sim/alu_or16_0_0.v,,alu_and16_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_c_addsub_0_0/sim/alu_c_addsub_0_0.vhd,1615678838,vhdl,,,,alu_c_addsub_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_c_addsub_1_0/sim/alu_c_addsub_1_0.vhd,1615678838,vhdl,,,,alu_c_addsub_1_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_div_gen_0_0/sim/alu_div_gen_0_0.vhd,1615678838,vhdl,,,,alu_div_gen_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_mult_gen_0_0/sim/alu_mult_gen_0_0.vhd,1615678838,vhdl,,,,alu_mult_gen_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_or16_0_0/sim/alu_or16_0_0.v,1615678837,verilog,,D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_xor2_0_0/sim/alu_xor2_0_0.v,,alu_or16_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/ip/alu_xor2_0_0/sim/alu_xor2_0_0.v,1615678837,verilog,,D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/sim/alu.v,,alu_xor2_0_0,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.ip_user_files/bd/alu/sim/alu.v,1615678837,verilog,,C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/and16.v,,alu,,,,,,,,
+D:/Education/Vivado Projects/cmpe415_hw04/cmpe415_hw04.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,

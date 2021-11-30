@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/and16.v" \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/or16.v" \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Verilog Files/xor16.v" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_and16_0_0/sim/alu_and16_0_0.v" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_or16_0_0/sim/alu_or16_0_0.v" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/ip/alu_xor2_0_0/sim/alu_xor2_0_0.v" \
+"../../../../cmpe415_hw04.ip_user_files/bd/alu/sim/alu.v" \
+"C:/Users/justi/OneDrive/Desktop/Spring 2021/CMPE415/HW/Justin_Loi_HW4/Testbenches/alu_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
